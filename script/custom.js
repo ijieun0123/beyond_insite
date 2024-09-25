@@ -1,6 +1,6 @@
 $(function () {
   /* Include Files */
-  $(".header_include").load("/include/header.html", function () {
+  $(".header_include").load("../include/header.html", function () {
     /* Header - 전체 카테고리 */
     $(window)
       .resize(function () {
@@ -72,7 +72,7 @@ $(function () {
       $("header .btns").hide();
     });
   });
-  $(".footer_include").load("/include/footer.html", function () {
+  $(".footer_include").load("../include/footer.html", function () {
     /* footer - 아코디언 */
     $(".lnb_group_title").click(function () {
       $(".lnb_group_content").slideUp(200);
