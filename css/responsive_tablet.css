@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/* Import Local SCSS Files */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  border: none;
+}
+
+/* Setting Variables : Font Family */
+/* Setting Variables : Text Color */
+/* Setting Variables : Object Color */
+/* 부트스트랩 아이콘 */
+/* Google web fonts */
+/* noto sans */
+/* raleway */
+/* 스포카 한 산스 */
+/* Responsive for Tablet */
+@media (max-width: 768px) and (max-width: 1024px) {
+  /* ========== Common CSS ========== */
+  section:not(.front_slider, .category_class),
+  footer {
+    padding: 35px 10px;
+  }
+  [class*=inner] {
+    width: 100%;
+  }
+  /* Header */
+  header {
+    /* Mega Navi */
+  }
+  header .header_inner {
+    padding: 0 10px;
+  }
+  header .header_inner .search {
+    width: 300px;
+  }
+  header .mega_navi .mega_navi_inner {
+    padding: 20px;
+  }
+  /* Footer */
+  footer .footer_inner {
+    padding: 30px 20px;
+  }
+  footer .footer_inner .lnb_wrap {
+    flex-direction: column;
+    gap: 30px;
+  }
+  footer .footer_inner .lnb_wrap .footer_slogan {
+    width: 100%;
+  }
+  footer .footer_inner .lnb_wrap .lnb {
+    width: 100%;
+  }
+  footer .footer_inner .company_wrap {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  /* ========== Front Page : index.html ========== */
+  /* Section : Front Slider */
+  .front_slider .front_slider_items .front_slider_wrap {
+    width: 100% !important;
+    height: 300px !important;
+    padding: 0 20px;
+  }
+  .front_slider .front_slider_items .front_slider_wrap .desc h1 {
+    font-size: 26px !important;
+  }
+  .front_slider .front_slider_items .front_slider_wrap .pic img {
+    height: 250px !important;
+  }
+  /* Section : category_shortcut */
+  .category_shortcut .category_shortcut_inner .category_shortcut_items {
+    gap: 10px;
+  }
+  .category_shortcut .category_shortcut_inner .category_shortcut_items .category_shortcut_item {
+    height: auto;
+    padding: 10px 0;
+  }
+  .category_shortcut .category_shortcut_inner .category_shortcut_items .category_shortcut_item span {
+    font-size: 14px;
+  }
+  /* Section : best_class */
+  .best_class .best_class_content .best_class_wrap {
+    flex-direction: column-reverse;
+  }
+  .best_class .best_class_content .best_class_wrap .invite_banner {
+    display: none;
+  }
+  .best_class .best_class_content .best_class_wrap .invite_banner_tablet {
+    display: block;
+    text-align: center;
+    background: #aae8f3;
+    border-radius: 5px;
+  }
+  .best_class .best_class_content .best_class_wrap .best_class_items_wrap .best_class_items .best_class_item .overview h3 {
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  /* Section : early_bird */
+  .early_bird .early_bird_content .early_bird_banner {
+    padding: 20px 50px;
+  }
+  /* Section : slogan */
+  .slogan {
+    padding: 35px !important;
+  }
+  /* Section : tip_tech */
+  .tip_tech .tip_tech_content .tip_tech_wrap .tip_tech_items .tip_tech_item .thum {
+    display: none;
+  }
+  .tip_tech .tip_tech_content .tip_tech_wrap .tip_tech_items .tip_tech_item .tip_tech_info .tip_tech_outline h3 {
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+  }
+  /* ========== Category Main Page : class_category.html ========== */
+  .category_class .category_class_inner {
+    padding: 0 10px;
+  }
+  .category_class .category_class_inner .category_class_wrap .category_class_items .slide-list {
+    margin: 0 -5px;
+  }
+  .category_class .category_class_inner .category_class_wrap .category_class_items .slick-slide {
+    margin: 0 5px;
+  }
+  /* ========== Take Course Page : take_course.html ========== */
+  .take_course .take_course_inner {
+    flex-direction: column;
+  }
+  /* ========== Class Detail Page : class_detail.html ========== */
+  section.class_detail_image .class_detail_image_inner {
+    padding: 0 30px;
+  }
+  section.class_detail_image .class_detail_image_inner .heading h1 {
+    font-size: 24px;
+  }
+  section.class_detail_image .class_detail_image_inner .heading p {
+    font-size: 16px;
+  }
+  section.class_detail_image .class_detail_image_inner .pic {
+    width: auto;
+    height: 250px;
+  }
+  section.class_detail_full .class_detail_full_inner .class_detail_full_content {
+    flex-direction: column-reverse;
+  }
+  section.class_detail_full .class_detail_full_inner .class_detail_full_content .sticky .class_detail_sidebar {
+    position: static;
+    width: 100%;
+  }
+  section.class_detail_full .class_detail_full_inner .class_detail_full_content .sticky .class_detail_sidebar .class_required_info .class_detail_sidebar_wrap .overview .class_price {
+    justify-content: end;
+  }
+  section.class_detail_full .class_detail_full_inner .class_detail_full_content .sticky .class_detail_sidebar .class_required_info .class_detail_sidebar_wrap .overview .class_price .price_current {
+    margin-right: 40px;
+  }
+  section.class_detail_full .class_detail_full_inner .class_detail_full_content .sticky .class_detail_sidebar .class_required_info .class_detail_sidebar_wrap .overview .class_price .sale {
+    margin-right: 20px;
+  }
+  section.class_detail_full .class_detail_full_inner .class_detail_full_content .sticky .class_detail_sidebar .class_required_info .class_detail_sidebar_wrap.mentor_summary {
+    justify-content: flex-start !important;
+    gap: 50px;
+  }
+}

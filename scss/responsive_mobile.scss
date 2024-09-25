@@ -1,0 +1,569 @@
+/* Import Local SCSS Files */
+@import "reset", "variables", "fonts";
+
+/* Responsive for Mobile */
+@media (max-width: 767px) {
+  /* ========== Common CSS ========== */
+  section:not(.front_slider, .category_class),
+  footer {
+    padding: 35px 0;
+  }
+  [class*="inner"] {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .front_header {
+    padding: 35px 10px;
+    h2 {
+      font-size: 18px;
+    }
+    .btn_view_all {
+    }
+  }
+
+  /* Header */
+  header {
+    .header_inner {
+      padding: 0 10px;
+      .logo_search {
+        .logo {
+          a {
+            img {
+              width: 180px;
+            }
+          }
+        }
+        .search {
+          display: none;
+        }
+        .btns {
+          .login_btn,
+          .signup_btn {
+            padding: 5px;
+          }
+        }
+      }
+      .gnb {
+        gap: 10px;
+        a {
+          span {
+            display: none;
+          }
+        }
+        .special_navi {
+          width: 360px;
+          white-space: nowrap;
+          overflow-y: hidden;
+          a {
+            display: inline-block;
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+    .mega_navi {
+      position: fixed;
+      top: 0;
+      left: -300px;
+      display: block;
+      width: 300px;
+      height: 100vh;
+      .search_mobile {
+        display: flex;
+        width: 280px;
+        margin: auto;
+        margin-top: 60px;
+      }
+      .mega_navi_inner {
+        flex-direction: column;
+        .mega_navi_item {
+          b {
+            display: block;
+            padding: 10px 15px;
+            border-bottom: 1px solid $dim_black;
+            color: $dark_gray;
+            &:after {
+              content: "\f4fe";
+              font-family: $bs_font;
+              float: right;
+              color: $silver_black;
+              font-size: 18px;
+            }
+            &.active {
+              color: $white;
+            }
+            &.active:after {
+              content: "\f2ea";
+              color: $white;
+            }
+          }
+          .mega_navi_item_wrap {
+            display: none;
+            padding: 10px 15px;
+          }
+        }
+      }
+      .btn_close {
+        display: block;
+        left: 10px;
+        right: auto;
+        color: $white;
+        font-size: 1.3em;
+      }
+    }
+  }
+
+  /* Footer */
+  footer {
+    padding: 30px 0;
+    .lnb_wrap {
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+      .footer_slogan {
+        width: 100%;
+        text-align: center;
+        h2 {
+          font-size: 20px;
+        }
+      }
+      .lnb {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+        .lnb_group {
+          margin: 10px 0;
+          b.lnb_group_title {
+            position: relative;
+            display: block;
+            padding-bottom: 15px;
+            border-bottom: 1px solid $silver_black;
+
+            &:after {
+              content: "\F282";
+              font-family: $bs_font;
+              position: absolute;
+              top: 50%;
+              right: 15px;
+              transform: translateY(-80%);
+              transition: 0.3s;
+            }
+            &.active:after {
+              transform: translateY(-80%) rotate(180deg);
+            }
+          }
+          .lnb_group_content {
+            display: none;
+            a {
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+    .company_wrap {
+      flex-direction: column;
+      padding: 20px;
+    }
+  }
+
+  /* ========== Front Page : index.html ========== */
+
+  /* Section : Front Slider */
+  .front_slider {
+    .front_slider_items {
+      .front_slider_item {
+        .front_slider_wrap {
+          flex-direction: column;
+          width: 100%;
+          height: 400px !important;
+          .desc {
+            margin-top: 20px;
+            b {
+            }
+            h1 {
+              margin: 5px 0;
+              font-size: 24px !important;
+            }
+            span {
+            }
+          }
+          .pic {
+            img {
+              height: 200px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : category_shortcut */
+  .category_shortcut {
+    .category_shortcut_inner {
+      .category_shortcut_items {
+        flex-wrap: wrap;
+        justify-content: center;
+        .category_shortcut_item {
+          box-shadow: none;
+          font-size: 14px;
+          em {
+            i {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : focus_class */
+  .focus_class {
+    .focus_class_content {
+      overflow-x: hidden;
+      .focus_class_items {
+        width: 530px;
+        padding-left: 5px;
+        @at-root .focus_class_item {
+          .thum {
+            img {
+            }
+          }
+          .overview {
+            h4 {
+              font-size: 14px;
+            }
+            .class_price {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : best_class */
+  .best_class {
+    .best_class_content {
+      .best_class_wrap {
+        flex-direction: column;
+        padding: 0 10px;
+        .invite_banner {
+          img {
+            height: auto;
+            width: 100%;
+          }
+        }
+        .invite_banner_tablet {
+          display: none;
+        }
+        .best_class_items_wrap {
+          .best_class_items {
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 5px;
+            .best_class_item {
+              .overview {
+                h4 {
+                  font-size: 14px;
+                }
+                .class_price {
+                  transform: scale(0.9);
+                  transform-origin: left;
+                  white-space: nowrap;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : early_bird */
+  .early_bird {
+    .early_bird_content {
+      padding: 0 10px;
+      .countdown_wrap {
+        width: 100%;
+        #early_bird_countdown {
+          font-size: 24px;
+        }
+      }
+      .early_bird_banner {
+        flex-direction: column;
+        padding: 20px;
+        .banner_about {
+          h1 {
+            font-size: 18px;
+          }
+          h2 {
+            font-size: 16px;
+          }
+          .hash_tag {
+            font-size: 18px;
+          }
+        }
+        .banner_thum {
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : blog */
+  .blog {
+    .blog_content {
+      padding: 0 10px;
+      .blog_items {
+        flex-direction: column;
+        gap: 20px;
+        .blog_item {
+          .desc {
+            .blog_outline {
+              p {
+                margin-bottom: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Section : slogan */
+  .slogan {
+    padding: 20px 0 !important;
+    .slogan_content {
+      padding: 0 20px;
+      h1 {
+        font-size: 19px;
+      }
+      span {
+        font-size: 15px;
+        em {
+        }
+      }
+    }
+  }
+
+  /* Section : tip_tech */
+  .tip_tech {
+    .tip_tech_content {
+      .tip_tech_wrap {
+        .tip_tech_items {
+          flex-direction: column;
+          gap: 0;
+          padding: 0 10px;
+          .tip_tech_item {
+            &:nth-child(1) {
+              padding-top: 0;
+            }
+            .tip_tech_info {
+              h3 {
+                font-size: 14px;
+              }
+              p {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* ========== Category Main Page : class_category.html ========== */
+  .category_class {
+    .category_class_inner {
+      padding: 0 10px;
+      .category_class_wrap {
+        margin: 0;
+        overflow-x: hidden;
+        .category_class_items {
+          width: 530px;
+          // Slick 아이템 간격 조절
+          .slide-list {
+            margin: 0 -5px;
+          }
+          .slick-slide {
+            margin: 0 5px;
+          }
+        }
+      }
+      .category_class_detail {
+        .category_shortcut {
+          .btn_shortcut {
+            margin-right: 3px;
+            margin-bottom: 5px;
+            font-size: 12px;
+            padding: 5px 7px;
+          }
+        }
+      }
+    }
+  }
+
+  /* Front Event Banner */
+  .front_event_banner {
+    width: 330px;
+    bottom: 50px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      width: 100%;
+    }
+  }
+
+  /* ========== Login Modal : header.html ========== */
+  .member_login_overlay {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* ========== Take Course Page : take_course.html ========== */
+  .take_course {
+    padding: 0 !important;
+    .take_course_inner {
+      flex-direction: column;
+      gap: 0;
+      .cart_wrap {
+        padding: 20px;
+        box-shadow: none;
+        .cart_items {
+          .cart_item {
+            .cart_item_wrap {
+              align-items: start;
+              .thum {
+                width: 60px;
+                height: 38px;
+              }
+            }
+          }
+        }
+        .cart_overview {
+          .cart_overview_detail {
+            flex-direction: column;
+            .cart_overview_info {
+              width: 100% !important;
+            }
+            .cart_overview_price {
+              width: 100% !important;
+              text-align: left !important;
+              div {
+                .price_current {
+                  display: inline-block !important;
+                }
+              }
+            }
+          }
+        }
+      }
+      .payment {
+        padding: 20px;
+        box-shadow: none;
+        border-top: 1px dashed $dim_gray;
+      }
+    }
+  }
+
+  /* ========== Class Detail Page : class_detail.html ========== */
+  .class_detail_image {
+    .class_detail_image_inner {
+      flex-direction: column;
+      padding-top: 30px;
+      .heading {
+        display: none;
+      }
+      .pic {
+        width: auto !important;
+        img {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+  .class_detail_full {
+    padding: 0 !important;
+    .class_detail_full_inner {
+      .class_detail_full_content {
+        flex-direction: column-reverse;
+        .class_detail_info {
+          padding: 20px 10px !important;
+          .class_detail_navi {
+            position: static !important;
+            display: flex;
+            overflow-y: hidden;
+            a {
+              white-space: nowrap;
+              font-size: 13px;
+              padding: 10px !important;
+            }
+          }
+          article.class_curriculum {
+            .curriculum_accordion {
+              .chapter_title {
+                font-size: 13px;
+                .chapter_hour {
+                  display: none;
+                }
+              }
+              .chapter_contents {
+                .chapter_content {
+                  .class_subject {
+                    font-size: 13px;
+                  }
+                  .class_hour {
+                    .class_hour {
+                      display: none;
+                    }
+                    .curriculum_badge.free {
+                      width: 55px;
+                      margin-right: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          article.class_review {
+            .class_detail_wrap {
+              .review_rating_group {
+                flex-direction: column;
+              }
+            }
+          }
+          article.class_mentor .class_detail_wrap {
+            flex-direction: column;
+          }
+        }
+        .sticky {
+          .class_detail_sidebar {
+            position: static !important;
+            width: 100% !important;
+            padding: 25px 10px !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            .class_required_info {
+              .class_detail_sidebar_wrap {
+                .overview {
+                  .class_price_final {
+                    .price_final {
+                      margin-right: 90px !important;
+                    }
+                  }
+                }
+                .btn_sidebar_badge {
+                  width: 32.5% !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
