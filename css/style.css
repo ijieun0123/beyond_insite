@@ -1141,7 +1141,7 @@ footer .company_wrap .sns a i {
   height: 20px;
   margin-right: 3px;
   transform: translateY(3px);
-  background: url(/img/icon-custom-radio.png) no-repeat;
+  background: url(../img/icon-custom-radio.png) no-repeat;
   background-position: left;
 }
 .take_course .take_course_inner .payment .payment_method_wrap div label input[type=radio]:checked + em {
@@ -1392,7 +1392,7 @@ section.member_register {
 
 /* ========== Class Detail Page : class_detail.html ========== */
 section.class_detail_image {
-  background: url(/img/ct-class-detail-main-01.png) no-repeat center/cover;
+  background: url(../img/ct-class-detail-main-01.png) no-repeat center/cover;
 }
 section.class_detail_image .class_detail_image_inner {
   display: flex;
