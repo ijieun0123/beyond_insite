@@ -1,6 +1,6 @@
 $(function () {
   /* Include Files */
-  $(".header_include").load("./include/header.html", function () {
+  $(".header_include").load("../include/header.html", function () {
     /* Header - 전체 카테고리 */
     $(window)
       .resize(function () {
@@ -72,7 +72,90 @@ $(function () {
       $("header .btns").hide();
     });
   });
-  $(".footer_include").load("./include/footer.html", function () {
+  $(".footer_include").load("../include/footer.html", function () {
+    /* footer - 아코디언 */
+    $(".lnb_group_title").click(function () {
+      $(".lnb_group_content").slideUp(200);
+      $(this).next().slideDown(200);
+      $(this).addClass("active");
+      $(this).parent().siblings().children("b").removeClass("active");
+    });
+  });
+
+  /* Include Files */
+  $(".header_home_include").load("./include/header_home.html", function () {
+    /* Header - 전체 카테고리 */
+    $(window)
+      .resize(function () {
+        /* 디바이스 너비 767px 이상 */
+        if ($(window).innerWidth() > 767) {
+          $(".gnb a:nth-child(1)").click(function () {
+            $(this).toggleClass("active");
+            $(".mega_navi").stop().slideToggle(300);
+          });
+          $("section").click(function () {
+            $(".mega_navi").stop().slideUp(300);
+          });
+          /* 디바이스 너비 767px 이하 */
+        } else if ($(window).innerWidth() < 767) {
+          $(".gnb a:nth-child(1)").click(function () {
+            $(".mega_navi").animate({ left: 0 }, 300);
+          });
+          $("section, .mega_navi .btn_close").click(function () {
+            $(".mega_navi").animate({ left: -300 }, 300);
+          });
+        }
+      })
+      .resize();
+    /* Member Register - 눈 */
+    $(".toggle_pw").click(function () {
+      // Toggle Icon Shape
+      $(this).toggleClass("bi-eye");
+      // Toggle Input Type
+      let inputType = $(this).parent().children("input").attr("type");
+      if (inputType == "password") {
+        $(this).parent().children("input").attr("type", "text");
+      } else {
+        $(this).parent().children("input").attr("type", "password");
+      }
+    });
+    /* Modal - Login */
+    $(".login_btn, .login_member a").click(function () {
+      $(".member_login_overlay").fadeIn();
+      $("body").addClass("active");
+    });
+    $(".login .btn_close").click(function () {
+      $(".member_login_overlay").fadeOut();
+      $("body").removeClass("active");
+    });
+    /* 공유하기 - Modal */
+    $(".btn_sidebar_badge.share").click(function () {
+      $(".class_share_overlay").fadeIn();
+      $("body").addClass("active");
+    });
+    $(".class_share_overlay .btn_close").click(function () {
+      $(".class_share_overlay").fadeOut();
+      $("body").removeClass("active");
+    });
+    /* 공유하기 - 링크복사 */
+    $(".share_choice_item.link").click(function () {
+      $(".copied_link").show();
+    });
+    /* Mega Navi - mobile */
+    $(".mega_navi_item b").click(function () {
+      $(".mega_navi_item_wrap").slideUp(200);
+      $(this).next().stop().slideDown(200);
+      $(this).addClass("active");
+      $(this).parent().siblings().children("b").removeClass("active");
+    });
+    /* After Login Header UI */
+    $(".btn_member_primary").click(function () {
+      $(".member_login_overlay").fadeOut();
+      $(".user_alarm").css("display", "flex");
+      $("header .btns").hide();
+    });
+  });
+  $(".footer_home_include").load("./include/footer.html", function () {
     /* footer - 아코디언 */
     $(".lnb_group_title").click(function () {
       $(".lnb_group_content").slideUp(200);
